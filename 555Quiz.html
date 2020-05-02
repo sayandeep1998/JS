@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><h1>555 timer astable calculator</h1></head>
+<body>
+
+<form id="form1">
+  R1 (ohms) : <input type="text"><br><br>
+  R2 (ohms) : <input type="text"><br><br>
+  C (Farads): <input type="text"><br><br>
+  <br>
+</form>
+
+<button onclick ="myFunction()">Calculate</button>
+<p id="show"></p>
+
+<script>
+  function myFunction() {
+  var x = document.getElementById("form1");
+  var R1=parseFloat(x.elements[0].value);
+  var R2=parseFloat(x.elements[1].value);
+  var C=parseFloat(x.elements[2].value);
+  var f=1.44/((R1+2*R2)*C);
+  var th= 0.693* (R1+R2)*C;
+  var tl=0.693* R2*C;
+  var t= 0.693*(R1+2*R2)*C;
+  var dc= (th/t) *100;
+  document.getElementById("show").innerHTML= 
+  "<b>The Frequency is </b> = "+ f +" Hz <br><b> Time High</b> = "+ th + " sec <br><b> Time Low</b> = "+ tl + " sec <br><b> Time period</b> = " + t + " sec <br><b> Duty Cycle</b> = "+ dc + " % <br><br><b> Thank you for using it</b>";
+}
+</script>
+</body>
+</html>
