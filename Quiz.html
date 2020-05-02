@@ -1,17 +1,242 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sample Quiz</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<h1>This is a sample quiz</h1>
+<script type="text/javascript">
+	var time;
+	var flag=0;
+	var score=0;
+function btn(){
+	alert("Do you want to submit?");
+	clearTimeout(time);
+	
+	if(document.getElementById("text").value!="" && flag==0){
+		flag=1;
+		document.getElementById("str").innerHTML="";
+	//q1	
+	var rd11=document.getElementById("rd1_1");
+	var rd12=document.getElementById("rd1_2");
+	var rd13=document.getElementById("rd1_3");
+	var rd14=document.getElementById("rd1_4");
+	if(rd11.checked==true){
+		document.getElementById("q1").innerHTML="<p style='color:green'>Correct +4<br></p>";
+		score+=4;
+	}
+	else if(rd11.checked==false &&  rd12.checked==false && rd13.checked==false && rd14.checked==false){
+		document.getElementById("q1").innerHTML="<p style='color:brown'>None selected.Score +0<br></p>";
+		score+=0;
+	}
+	else{
+		document.getElementById("q1").innerHTML="<p style='color:red'>Incorrect -1<br></p>";
+		score-=1;
+	}
+
+
+	//q2
+	var rd21=document.getElementById("rd2_1");
+	var rd22=document.getElementById("rd2_2");
+	var rd23=document.getElementById("rd2_3");
+	var rd24=document.getElementById("rd2_4");
+	if(rd23.checked==true){
+		document.getElementById("q2").innerHTML="<p style='color:green'>Correct<br></p>";
+		score+=4;
+	}
+	else if(rd21.checked==false &&  rd22.checked==false && rd23.checked==false && rd24.checked==false){
+		document.getElementById("q2").innerHTML="<p style='color:brown'>None selected.Score +0<br></p>";
+		score+=0;
+	}
+	else{
+		document.getElementById("q2").innerHTML="<p style='color:red'>Incorrect<br></p>";
+		score-=1;
+	}
+
+	//q3
+	var rd31=document.getElementById("rd3_1");
+	var rd32=document.getElementById("rd3_2");
+	var rd33=document.getElementById("rd3_3");
+	var rd34=document.getElementById("rd3_4");
+	if(rd33.checked==true){
+		document.getElementById("q3").innerHTML="<p style='color:green'>Correct<br></p>";
+		score+=4;
+	}
+	else if(rd31.checked==false &&  rd32.checked==false && rd33.checked==false && rd34.checked==false){
+		document.getElementById("q3").innerHTML="<p style='color:brown'>None selected.Score +0<br></p>";
+		score+=0;
+	}
+	else{
+		document.getElementById("q3").innerHTML="<p style='color:red'>Incorrect<br></p>";
+		score-=1;
+	}
+
+	//q4
+	var rd41=document.getElementById("rd4_1");
+	var rd42=document.getElementById("rd4_2");
+	var rd43=document.getElementById("rd4_3");
+	var rd44=document.getElementById("rd4_4");
+	if(rd44.checked==true){
+		document.getElementById("q4").innerHTML="<p style='color:green'>Correct<br></p>";
+		score+=4;
+	}
+	else if(rd41.checked==false &&  rd42.checked==false && rd43.checked==false && rd44.checked==false){
+		document.getElementById("q4").innerHTML="<p style='color:brown'>None selected.Score +0<br></p>";
+		score+=0;
+	}
+	else{
+		document.getElementById("q4").innerHTML="<p style='color:red'>Incorrect<br></p>";
+		score-=1;
+	}
+
+	//q5
+	var rd51=document.getElementById("rd5_1");
+	var rd52=document.getElementById("rd5_2");
+	var rd53=document.getElementById("rd5_3");
+	var rd54=document.getElementById("rd5_4");
+	if(rd53.checked==true){
+		document.getElementById("q5").innerHTML="<p style='color:green'>Correct<br></p>";
+		score+=4;
+	}
+	else if(rd51.checked==false &&  rd52.checked==false && rd53.checked==false && rd54.checked==false){
+		document.getElementById("q5").innerHTML="<p style='color:brown'>None selected.Score +0<br></p>";
+		score+=0;
+	}
+	else{
+		document.getElementById("q5").innerHTML="<p style='color:red'>Incorrect<br></p>";
+		score-=1;
+	}
+
+	//q6
+	var rd61=document.getElementById("rd6_1");
+	var rd62=document.getElementById("rd6_2");
+	var rd63=document.getElementById("rd6_3");
+	var rd64=document.getElementById("rd6_4");
+	if(rd64.checked==true){
+		document.getElementById("q6").innerHTML="<p style='color:green'>Correct<br></p>";
+		score+=4;
+	}
+	else if(rd61.checked==false &&  rd62.checked==false && rd63.checked==false && rd64.checked==false){
+		document.getElementById("q6").innerHTML="<p style='color:brown'>None selected.Score +0<br></p>";
+		score+=0;
+	}
+	else{
+		document.getElementById("q6").innerHTML="<p style='color:red'>Incorrect<br></p>";
+		score-=1;
+	}
+
+	//q7
+	var rd71=document.getElementById("rd7_1");
+	var rd72=document.getElementById("rd7_2");
+	var rd73=document.getElementById("rd7_3");
+	var rd74=document.getElementById("rd7_4");
+	if(rd74.checked==true){
+		document.getElementById("q7").innerHTML="<p style='color:green'>Correct<br></p>";
+		score+=4;
+	}
+	else if(rd71.checked==false &&  rd72.checked==false && rd73.checked==false && rd74.checked==false){
+		document.getElementById("q7").innerHTML="<p style='color:brown'>None selected.Score +0<br></p>";
+		score+=0;
+	}
+	else{
+		document.getElementById("q7").innerHTML="<p style='color:red'>Incorrect<br></p>";
+		score-=1;
+	}
+
+	//q8
+	var rd81=document.getElementById("rd8_1");
+	var rd82=document.getElementById("rd8_2");
+	var rd83=document.getElementById("rd8_3");
+	var rd84=document.getElementById("rd8_4");
+	if(rd81.checked==true){
+		document.getElementById("q8").innerHTML="<p style='color:green'>Correct<br></p>";
+		score+=4;
+	}
+	else if(rd81.checked==false &&  rd82.checked==false && rd83.checked==false && rd84.checked==false){
+		document.getElementById("q8").innerHTML="<p style='color:brown'>None selected.Score +0<br></p>";
+		score+=0;
+	}
+	else{
+		document.getElementById("q8").innerHTML="<p style='color:red'>Incorrect<br></p>";
+		score-=1;
+	}
+
+	//q9
+	var rd91=document.getElementById("rd9_1");
+	var rd92=document.getElementById("rd9_2");
+	var rd93=document.getElementById("rd9_3");
+	var rd94=document.getElementById("rd9_4");
+	if(rd92.checked==true){
+		document.getElementById("q9").innerHTML="<p style='color:green'>Correct<br></p>";
+		score+=4;
+	}
+	else if(rd91.checked==false &&  rd92.checked==false && rd93.checked==false && rd94.checked==false){
+		document.getElementById("q9").innerHTML="<p style='color:brown'>None selected.Score +0<br></p>";
+		score+=0;
+	}
+	else{
+		document.getElementById("q9").innerHTML="<p style='color:red'>Incorrect<br></p>";
+		score-=1;
+	}
+
+	//q10
+	var rd101=document.getElementById("rd10_1");
+	var rd102=document.getElementById("rd10_2");
+	var rd103=document.getElementById("rd10_3");
+	var rd104=document.getElementById("rd10_4");
+	if(rd101.checked==true){
+		document.getElementById("q10").innerHTML="<p style='color:green'>Correct<br></p>";
+		score+=4;
+	}
+	else if(rd101.checked==false &&  rd102.checked==false && rd103.checked==false && rd104.checked==false){
+		document.getElementById("q10").innerHTML="<p style='color:brown'>None selected.Score +0<br></p>";
+		score+=0;
+	}
+	else{
+		document.getElementById("q10").innerHTML="<p style='color:red'>Incorrect<br></p>";
+		score-=1;
+	}
+
+
+	var name=document.getElementById("text").value;
+	document.getElementById("res").innerHTML= "<br>"+name+ "</b> you have got <b>" +score+ "</b> marks";
+}
+	else if(document.getElementById("text").value=="")
+		alert("You haven't entered any name, enter name then reattempt");
+	else if(flag==1)
+		alert("You cannot submit again, press reset and reattempt");
+}			
+
+function start() {
+	if(document.getElementById("text").value!="" && flag==0){
+ 		document.getElementById("str").innerHTML="Quiz started";
+		time =setTimeout(btn,120000);
+	}
+	else if(flag!=0)
+		alert("Press reset then Start again");
+	else if(document.getElementById("text").value=="")
+		alert("No name entered, enter name and Start again");
+}
+function reset(){
+	flag=0;
+	score=0;
+	document.getElementById("str").innerHTML="";
+	document.getElementById("res").innerHTML="";
+	document.getElementById("text").value="";
+	var element=document.getElementsByClassName("para");
+	for(var i=0;i<=9;i++)
+		element[i].innerHTML="";
+	var element1=document.getElementsByClassName("option");
+	for(var i=0;i<40;i++)
+		element1[i].checked=false;
+}
+</script>
 </head>
 
-<h1>This is a sample quiz on embedded systems</h1>
+
 <body>
 	<h3>Instructions</h3>
-	This quiz has 10 questions, each question has only 1 option correct. Time allotted is 2min. You may submit it before time or time will end automatically. Timer will start when you click Start. Good luck<br><br>
+	This quiz has 10 questions, each question has only 1 option correct. Each question carries 4 mark and selecting negative option will yield -1 mark. Time allotted is 2min. You may submit it before time or time will end automatically. Timer will start when you click Start. Good luck<br><br>
 	<input id="text" placeholder="Your Name" value=""><br><br>
-	<button onclick="start()">Start</button>
-	<br><p id="str"></p> 
+	<button onclick="start()">Start</button><br>
+	<br><p style="color:blue" id="str"></p> 
 	<p id="time"></p>
 <ol type="A">
 	<li>The STM32 has an?<br><br>
@@ -25,11 +250,11 @@
 	<p id="q1" class="para"></p>
 </ol>	
 	</li>
-	<li>IRF540 is a<br><br>
+	<li>BC557 is a<br><br>
 <ol>		
 		<li><input type ="radio" name = "grp2" id="rd2_1" class="option">npn bjt</input></li>
-		<li><input type ="radio" name = "grp2" id="rd2_2" class="option">pnp bjt</input></li>
-		<li><input type ="radio" name = "grp2" id="rd2_3" class="option">n channel MOSFET</input></li>
+		<li><input type ="radio" name = "grp2" id="rd2_2" class="option">n channel MOSFET</input></li>
+		<li><input type ="radio" name = "grp2" id="rd2_3" class="option">pnp bjt</input></li>
 		<li><input type ="radio" name = "grp2" id="rd2_4" class="option">p channel MOSFET</input></li>
 		<br>
 		<p>Your answer is:</p>
@@ -98,9 +323,9 @@
 </ol>
 	</li>
 
-	<li>7483 is a<br><br>
+	<li>7400 is a<br><br>
 <ol>		
-		<li><input type ="radio" name = "grp8" id="rd8_1" class="option">4 bit adder</input></li>
+		<li><input type ="radio" name = "grp8" id="rd8_1" class="option">nand gate</input></li>
 		<li><input type ="radio" name = "grp8" id="rd8_2" class="option">xor gate</input></li>
 		<li><input type ="radio" name = "grp8" id="rd8_3" class="option">and gate</input></li>
 		<li><input type ="radio" name = "grp8" id="rd8_4" class="option">D flip flop</input></li>
@@ -143,162 +368,4 @@
 <button onclick="reset()">Reset</button>
 <br><br><br><b>Thank you for using it</b>
 </body>
-
-<script type="text/javascript">
-	var time;
-	var flag=0;
-	var score=0;
-function btn(){
-	alert("Do you want to submit?");
-	clearTimeout(time);
-	
-	if(document.getElementById("text").value!="" && flag==0){
-		flag=1;
-		document.getElementById("str").innerHTML="";
-	//q1	
-	var rd11=document.getElementById("rd1_1");
-	var rd12=document.getElementById("rd1_2");
-	var rd13=document.getElementById("rd1_3");
-	var rd14=document.getElementById("rd1_4");
-	if(rd11.checked==true){
-		document.getElementById("q1").innerHTML="<p style='color:green'>Correct<br></p>";
-		score++;
-	}
-	else
-		document.getElementById("q1").innerHTML="<p style='color:red'>Incorrect<br></p>";
-	//q2
-	var rd21=document.getElementById("rd2_1");
-	var rd22=document.getElementById("rd2_2");
-	var rd23=document.getElementById("rd2_3");
-	var rd24=document.getElementById("rd2_4");
-	if(rd23.checked==true){
-		document.getElementById("q2").innerHTML="<p style='color:green'>Correct<br></p>";
-		score++;
-	}
-	else
-		document.getElementById("q2").innerHTML="<p style='color:red'>Incorrect<br></p>";
-	//q3
-	var rd31=document.getElementById("rd3_1");
-	var rd32=document.getElementById("rd3_2");
-	var rd33=document.getElementById("rd3_3");
-	var rd34=document.getElementById("rd3_4");
-	if(rd33.checked==true){
-		document.getElementById("q3").innerHTML="<p style='color:green'>Correct<br></p>";
-		score++;
-	}
-	else
-		document.getElementById("q3").innerHTML="<p style='color:red'>Incorrect<br></p>";
-	//q4
-	var rd41=document.getElementById("rd4_1");
-	var rd42=document.getElementById("rd4_2");
-	var rd43=document.getElementById("rd4_3");
-	var rd44=document.getElementById("rd4_4");
-	if(rd44.checked==true){
-		document.getElementById("q4").innerHTML="<p style='color:green'>Correct<br></p>";
-		score++;
-	}
-	else
-		document.getElementById("q4").innerHTML="<p style='color:red'>Incorrect<br></p>";
-	//q5
-	var rd51=document.getElementById("rd5_1");
-	var rd52=document.getElementById("rd5_2");
-	var rd53=document.getElementById("rd5_3");
-	var rd54=document.getElementById("rd5_4");
-	if(rd53.checked==true){
-		document.getElementById("q5").innerHTML="<p style='color:green'>Correct<br></p>";
-		score++;
-	}
-	else
-		document.getElementById("q5").innerHTML="<p style='color:red'>Incorrect<br></p>";
-	//q6
-	var rd61=document.getElementById("rd6_1");
-	var rd62=document.getElementById("rd6_2");
-	var rd63=document.getElementById("rd6_3");
-	var rd64=document.getElementById("rd6_4");
-	if(rd64.checked==true){
-		document.getElementById("q6").innerHTML="<p style='color:green'>Correct<br></p>";
-		score++;
-	}
-	else
-		document.getElementById("q6").innerHTML="<p style='color:red'>Incorrect<br></p>";
-	//q7
-	var rd71=document.getElementById("rd7_1");
-	var rd72=document.getElementById("rd7_2");
-	var rd73=document.getElementById("rd7_3");
-	var rd74=document.getElementById("rd7_4");
-	if(rd74.checked==true){
-		document.getElementById("q7").innerHTML="<p style='color:green'>Correct<br></p>";
-		score++;
-	}
-	else
-		document.getElementById("q7").innerHTML="<p style='color:red'>Incorrect<br></p>";
-	//q8
-	var rd81=document.getElementById("rd8_1");
-	var rd82=document.getElementById("rd8_2");
-	var rd83=document.getElementById("rd8_3");
-	var rd84=document.getElementById("rd8_4");
-	if(rd81.checked==true){
-		document.getElementById("q8").innerHTML="<p style='color:green'>Correct<br></p>";
-		score++;
-	}
-	else
-		document.getElementById("q8").innerHTML="<p style='color:red'>Incorrect<br></p>";
-	//q9
-	var rd91=document.getElementById("rd9_1");
-	var rd92=document.getElementById("rd9_2");
-	var rd93=document.getElementById("rd9_3");
-	var rd94=document.getElementById("rd9_4");
-	if(rd92.checked==true){
-		document.getElementById("q9").innerHTML="<p style='color:green'>Correct<br></p>";
-		score++;
-	}
-	else
-		document.getElementById("q9").innerHTML="<p style='color:red'>Incorrect<br></p>";
-	//q10
-	var rd101=document.getElementById("rd10_1");
-	var rd102=document.getElementById("rd10_2");
-	var rd103=document.getElementById("rd10_3");
-	var rd104=document.getElementById("rd10_4");
-	if(rd101.checked==true){
-		document.getElementById("q10").innerHTML="<p style='color:green'>Correct<br></p>";
-		score++;
-	}
-	else
-		document.getElementById("q10").innerHTML="<p style='color:red'>Incorrect<br></p>";
-
-
-	var name=document.getElementById("text").value;
-	document.getElementById("res").innerHTML= "<br>"+name+ "</b> you have got <b>" +score+ "</b> marks";
-}
-	else if(document.getElementById("text").value=="")
-		alert("You haven't entered any name, enter name then reattempt");
-	else if(flag==1)
-		alert("You cannot submit again, press reset and reattempt");
-}			
-
-function start() {
-	if(document.getElementById("text").value!="" && flag==0){
- 		document.getElementById("str").innerHTML="Quiz started";
-		time =setTimeout(btn,120000);
-	}
-	else if(flag!=0)
-		alert("Press reset then Start again");
-	else if(document.getElementById("text").value=="")
-		alert("No name entered, enter name and Start again");
-}
-function reset(){
-	flag=0;
-	score=0;
-	document.getElementById("str").innerHTML="";
-	document.getElementById("res").innerHTML="";
-	document.getElementById("text").value="";
-	var element=document.getElementsByClassName("para");
-	for(var i=0;i<=9;i++)
-		element[i].innerHTML="";
-	var element1=document.getElementsByClassName("option");
-	for(var i=0;i<40;i++)
-		element1[i].checked=false;
-}
-</script>
-
 </html>
