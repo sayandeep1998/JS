@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head><h1>555 timer astable calculator</h1></head>
+<head>
+  <title>555 calculator</title>
+  </head>
 <body>
-
-<form id="form1">
-  R1 (ohms) : <input type="text"><br><br>
-  R2 (ohms) : <input type="text"><br><br>
-  C (Farads): <input type="text"><br><br>
-  <br>
-</form>
-
-<button onclick ="myFunction()">Calculate</button>
+  <h1>555 timer astable calculator</h1>
+  <fieldset>
+    <legend>Enter Values</legend><br>
+  R1 (ohms):  <input type="number"  placeholder="R1" required autofocus class="rc" id="r1"><br><br>
+  R2 (ohms):  <input type="number" placeholder="R2" required autofocus class="rc" id="r2"><br><br>
+  C (Farads): <input type="number" placeholder="C" required autofocus class="rc" id="c"><br><br>
+</fieldset>
+<br><button onclick ="myFunction()">Calculate</button>
+<button onclick ="reset()">Reset</button>
 <p id="show"></p>
-
+<button onclick="window.print()">Print Report</button>
+<p id="ty"></p>
+</body>
 <script>
+  function reset(){
+    var ele=document.getElementsByClassName("rc")
+    for(var i=0;i<3;i++)
+      ele[i].value="";
+    document.getElementById("show").innerHTML="";
+    document.getElementById("ty").innerHTML="";
+  }
   function myFunction() {
-  var x = document.getElementById("form1");
-  var R1=parseFloat(x.elements[0].value);
-  var R2=parseFloat(x.elements[1].value);
-  var C=parseFloat(x.elements[2].value);
+  var R1=parseFloat(document.getElementById("r1").value);
+  var R2=parseFloat(document.getElementById("r2").value);
+  var C=parseFloat(document.getElementById("c").value);
   var f=1.44/((R1+2*R2)*C);
-  var th= 0.693* (R1+R2)*C;
-  var tl=0.693* R2*C;
+  var th= 0.693*(R1+R2)*C;
+  var tl=0.693*R2*C;
   var t= 0.693*(R1+2*R2)*C;
-  var dc= (th/t) *100;
-  document.getElementById("show").innerHTML= 
-  "<b>The Frequency is </b> = "+ f +" Hz <br><b> Time High</b> = "+ th + " sec <br><b> Time Low</b> = "+ tl + " sec <br><b> Time period</b> = " + t + " sec <br><b> Duty Cycle</b> = "+ dc + " % <br><br><b> Thank you for using it</b>";
+  var dc= (th/t)*100;
+  document.getElementById("show").innerHTML=
+  "<b>The Frequency is </b>="+f.toPrecision(2)+" Hz<br><b>Time High</b> = "+th.toPrecision(2)+" sec<br><b>Time Low</b>="+tl.toPrecision(2)+" sec <br><b>Time period</b>="+t.toPrecision(2)+" sec<br><b> Duty Cycle</b>="+dc.toPrecision(2)+"%";
+  document.getElementById("ty").innerHTML="<br><br><b> Thank you for using it</b>";
 }
 </script>
-</body>
 </html>
